@@ -4,6 +4,7 @@ public class CreateBookingRequest
 {
     public string Id { get; set; } = Guid.NewGuid().ToString();
     public string EventId { get; set; } = null!;
+    public string? PackageId { get; set; }
     public string? UserId { get; set; }
     public int TicketQuantity { get; set; } = 1;
 

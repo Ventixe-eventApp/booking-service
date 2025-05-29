@@ -4,6 +4,7 @@ public class Booking
 {
     public string Id { get; set; } = null!;
     public string EventId { get; set; } = null!;
+    public string? PackageId { get; set; }
     public DateTime BookingDate { get; set; }
     public int TicketQuantity { get; set; }
     public string FirstName { get; set; } = null!;

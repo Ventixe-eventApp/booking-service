@@ -39,7 +39,7 @@ public class BookingController(IBookingService bookingService) : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetEventById(string id)
     {
-        var selectedEvent = await _bookingService.Ge(id);
+        var selectedEvent = await _bookingService.GetBookingByIdAsync(id);
         if (selectedEvent == null)
         {
             return NotFound(new { message = "Event not found" });

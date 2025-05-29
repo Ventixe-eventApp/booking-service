@@ -56,6 +56,7 @@ public class BookingService(IBookingRepository bookingRepository, IBookingGuestR
             {
                 Id = req.Id,
                 EventId = req.EventId,
+                PackageId = req.PackageId,
                 UserId = req.UserId,
                 BookingDate = DateTime.Now,
                 TicketQuantity = req.TicketQuantity,
@@ -85,7 +86,7 @@ public class BookingService(IBookingRepository bookingRepository, IBookingGuestR
         {
             Id = x.Id,
             EventId = x.EventId,
-           
+            PackageId = x.PackageId,
             BookingDate = x.BookingDate,
             TicketQuantity = x.TicketQuantity,
             FirstName = x.BookingGuest?.FirstName ?? string.Empty,
@@ -115,6 +116,7 @@ public class BookingService(IBookingRepository bookingRepository, IBookingGuestR
             {
                 Id = result.Result.Id,
                 EventId = result.Result.EventId,
+                PackageId = result.Result.PackageId,
                 BookingDate = result.Result.BookingDate,
                 TicketQuantity = result.Result.TicketQuantity,
                 FirstName = result.Result.BookingGuest?.FirstName ?? string.Empty,

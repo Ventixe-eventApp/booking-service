@@ -7,6 +7,7 @@ public class BookingEntity
 
     public string Id { get; set; } = null!;
     public string EventId { get; set; } = null!;
+    public string? PackageId { get; set; } 
     public string? UserId { get; set; }
     public int TicketQuantity { get; set; } 
     public DateTime BookingDate { get; set; } 
